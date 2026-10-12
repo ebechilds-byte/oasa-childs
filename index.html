@@ -35,6 +35,22 @@
             text-align: center;
         }
 
+        /* ヘッダー内のロゴとチーム名を横並びにする設定 */
+        .header-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-logo {
+            height: 50px; /* ロゴの表示サイズ */
+            width: auto;
+            vertical-align: middle;
+            border-radius: 50%; /* 丸型ロゴの輪郭調整 */
+        }
+
         header h1 {
             margin: 0;
             font-size: 2rem;
@@ -147,7 +163,10 @@
 <body>
 
     <header>
-        <h1>大麻チャイルズ</h1>
+        <div class="header-title-container">
+            <img src="logo.jpg" alt="大麻チャイルズ ロゴ" class="header-logo">
+            <h1>大麻チャイルズ</h1>
+        </div>
         <p>北海道江別市で活動する少年野球チーム</p>
     </header>
 
