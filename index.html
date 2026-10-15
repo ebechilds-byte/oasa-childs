@@ -119,6 +119,20 @@
             animation: rainbow-blink 1.2s infinite alternate;
         }
 
+        /* 赤点滅用のアニメーション定義 */
+        @keyframes red-blink {
+            0%   { color: #e74c3c; opacity: 1; }
+            50%  { color: #c0392b; opacity: 0.3; }
+            100% { color: #e74c3c; opacity: 1; }
+        }
+
+        .blink-red {
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 0.5rem;
+            animation: red-blink 1s infinite;
+        }
+
         .insta-link {
             display: inline-block;
             color: #e1306c;
@@ -195,6 +209,16 @@
             color: #52b788;
         }
 
+        .result-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .result-list li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
         footer {
             text-align: center;
             padding: 1.5rem;
@@ -224,7 +248,7 @@
         <a href="#schedule">練習・試合日程</a>
         <a href="#leaders">指導者紹介</a>
         <a href="#events">イベント</a>
-        <a href="#annual-schedule">年間スケジュール</a>
+        <a href="#annual-schedule">2026年度結果</a>
         <a href="#history">大麻チャイルズの歴史</a>
         <a href="#recruit">団員募集・見学</a>
         <a href="#instagram">Instagram</a>
@@ -351,10 +375,23 @@
             </div>
         </section>
 
-        <!-- 年間スケジュール -->
+        <!-- 2026年度結果 -->
         <section id="annual-schedule">
-            <h2>年間スケジュール</h2>
-            <p><a href="https://ebetsu-jrbb.com/%e4%b8%bb%e5%82%ac%e3%83%bb%e5%85%b1%e5%82%ac%e7%ad%89%e4%ba%8b%e6%a5%ad2026/" target="_blank" rel="noopener noreferrer" class="detail-link">2026年度試合結果</a></p>
+            <h2>2026年度結果</h2>
+            <ul class="result-list">
+                <li>
+                    <a href="https://ebetsu-jrbb.com/%e2%97%8f2026%e3%81%ae%e3%81%a3%e3%81%bd%e3%82%8d%e3%83%86%e3%82%a3%e3%83%bc%e3%83%9c%e3%83%bc%e3%83%ab%e5%a4%a7%e4%bc%9a/" target="_blank" rel="noopener noreferrer" class="detail-link">のっぽろティーボール大会(2026)</a>
+                    <span class="blink-rainbow">優勝！</span>
+                </li>
+                <li>
+                    令和８年度 大栄建工杯当別学童野球大会
+                    <span class="blink-red">準優勝！</span>
+                </li>
+                <li>
+                    ベーラン対決
+                    <span class="blink-rainbow">優勝！</span>
+                </li>
+            </ul>
         </section>
 
         <!-- 大麻チャイルズの歴史 -->
