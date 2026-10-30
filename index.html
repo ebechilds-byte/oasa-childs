@@ -129,6 +129,14 @@
             animation: rainbow-blink 1.2s infinite alternate;
         }
 
+        /* カラフルでゆっくり点滅 */
+        .blink-rainbow-slow {
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 0.5rem;
+            animation: rainbow-blink 3s infinite alternate;
+        }
+
         /* 赤点滅用のアニメーション定義 */
         @keyframes red-blink {
             0%   { color: #e74c3c; opacity: 1; }
@@ -233,6 +241,36 @@
         .result-list li {
             margin-bottom: 0.8rem;
             font-size: 1.05rem;
+        }
+
+        /* プルダウン（アコーディオン）用スタイル */
+        details.history-dropdown {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+        }
+
+        details.history-dropdown summary {
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            outline: none;
+            user-select: none;
+        }
+
+        details.history-dropdown summary:hover {
+            opacity: 0.85;
+        }
+
+        details.history-dropdown .result-list {
+            margin-top: 0.8rem;
+            padding-left: 1rem;
+            border-top: 1px dashed #ccc;
+            padding-top: 0.8rem;
         }
 
         footer {
@@ -462,6 +500,103 @@
                 <li>平成18年 全道交流少年野球大会 1回戦敗退</li>
                 <li>平成19年 全道交流少年野球大会 準々決勝敗退</li>
             </ul>
+
+            <h3>＜石狩管内大会・江別市内大会＞</h3>
+            <ul class="result-list">
+                <li>昭和62年 学童江別予選 代表 <span class="blink-rainbow-slow">★代表</span></li>
+                <li>平成9年 太陽グループ杯 江別代表 <span class="blink-rainbow-slow">★代表</span></li>
+                <li>平成10年 太陽グループ杯 江別代表 <span class="blink-rainbow-slow">★代表</span></li>
+                <li>平成11年 太陽グループ杯 江別代表 <span class="blink-rainbow-slow">★代表</span></li>
+                <li>平成12年 太陽グループ杯 江別代表 <span class="blink-rainbow-slow">★代表</span></li>
+                <li>平成18年 太陽グループ杯 江別代表 <span class="blink-rainbow-slow">★代表</span></li>
+            </ul>
+
+            <!-- 優勝 プルダウン -->
+            <details class="history-dropdown">
+                <summary><span class="blink-rainbow">優勝</span>（タップして一覧を表示）</summary>
+                <ul class="result-list">
+                    <li>昭和51年 江別育成春季大会 全道少年野球石狩大会</li>
+                    <li>昭和53年 江別市長旗 江別少年秋季大会</li>
+                    <li>昭和54年 江別市長旗 市民生協少年野球大会 江別教育長杯</li>
+                    <li>昭和57年 スタルヒン杯石狩大会 江別少年秋季大会</li>
+                    <li>昭和58年 北海道選手権石狩大会 少年野球選手権大会 江別教育長杯</li>
+                    <li>昭和60年 学童少年野球選手権大会兼全道少年石狩大会 江別市長旗 江別教育長杯 石狩東部選手権大会</li>
+                    <li>昭和61年 江別市長旗 江別教育長杯 石狩東部選手権大会</li>
+                    <li>昭和63年 江別少年野球選手権 江別少年秋季大会</li>
+                    <li>平成元年 江別教育長杯 少年野球選手権大会</li>
+                    <li>平成2年 少年野球選手権大会 江別市長旗</li>
+                    <li>平成3年 学童少年野球石狩大会 スタルヒン杯石狩大会 江別市長旗 江別教育長杯 少年野球選手権大会 石狩東部選手権大会</li>
+                    <li>平成4年 少年野球選手権大会 江別市長旗 石狩東部選手権大会 江別少年野球秋季大会（新人戦）</li>
+                    <li>平成5年 学童少年野球石狩大会 江別教育長杯 石狩東部選手権大会 江別少年野球秋季大会（新人戦）</li>
+                    <li>平成6年 学童少年野球石狩大会 スタルヒン杯石狩大会 江別教育長杯 交流少年野球大会 江別少年野球秋季大会（新人戦）</li>
+                    <li>平成7年 学童少年野球石狩大会 スタルヒン杯石狩大会 ゼット旗大会 江別市内大会全試合 <span class="blink-red">全勝達成！</span></li>
+                    <li>平成8年 石狩東部選手権大会</li>
+                    <li>平成9年 石狩東部選手権大会 江別教育長杯 道新交流増毛大会</li>
+                    <li>平成10年 学童少年野球石狩大会 江別市長旗 江別教育長杯 協和士建旗 道新交流増毛大会 石狩東部選手権大会</li>
+                    <li>平成11年 学童少年野球石狩大会 江別市内大会全試合 <span class="blink-red">全勝達成！</span> 新人リーグ戦大会</li>
+                    <li>平成12年 江別市交流少年リーグ戦 江別選手権大会 学童少年野球石狩大会 スタルヒン杯石狩大会 江別厚別交流大会 江別市長旗 上野産業旗 道新ユベオツの風旗 太陽グループ杯石狩大会</li>
+                    <li>平成13年 江別市交流少年リーグ戦 学童少年野球石狩大会 ゼット旗大会（新人戦） 江別少年野球秋季大会（新人戦）</li>
+                    <li>平成14年 江別市交流少年リーグ戦 学童少年野球石狩大会 フレンドリーカップ増毛大会 交流少年野球大会 石狩東部選手権大会 江別少年野球秋季大会</li>
+                    <li>平成15年 学童少年野球石狩大会 フレンドリーカップ増毛大会 上野産業旗 道新ユベオツの風旗</li>
+                    <li>平成16年 北海道選手権石狩大会 スタルヒン杯石狩大会 江別教育長杯 上野産業旗 道新ユベオツの風旗</li>
+                    <li>平成18年 江別選手権大会 島田塗装旗</li>
+                    <li>平成19年 島田塗装旗 厚別道新スポーツ旗</li>
+                    <li>平成25年 江別市長旗 道新ユベオツの風旗</li>
+                    <li>平成26年 当別野球連盟大会</li>
+                </ul>
+            </details>
+
+            <!-- 準優勝 プルダウン -->
+            <details class="history-dropdown">
+                <summary><span class="blink-red">準優勝</span>（タップして一覧を表示）</summary>
+                <ul class="result-list">
+                    <li>昭和52年 江別育成春季大会</li>
+                    <li>昭和54年 全道少年野球石狩大会 江別少年秋季大会</li>
+                    <li>昭和55年 江別市長旗</li>
+                    <li>昭和58年 江別市長旗</li>
+                    <li>昭和62年 石狩東部選手権大会 少年野球選手権大会 道新杯少年野球大会 江別少年野球秋季大会（新人戦）</li>
+                    <li>昭和63年 交流少年野球大会</li>
+                    <li>平成元年 江別市長旗</li>
+                    <li>平成2年 江別教育長杯</li>
+                    <li>平成4年 学童少年野球石狩大会</li>
+                    <li>平成7年 上野産業旗</li>
+                    <li>平成9年 交流少年野球大会</li>
+                    <li>平成11年 ゼット旗大会（新人戦）</li>
+                    <li>平成13年 上野産業旗</li>
+                    <li>平成15年 江別市長旗 石狩東部選手権大会 江別選手権大会</li>
+                    <li>平成16年 江別選手権大会</li>
+                    <li>平成18年 学童少年野球石狩大会</li>
+                    <li>平成19年 学童少年野球石狩大会 日刊留萌大会</li>
+                    <li>平成25年 島田塗装旗</li>
+                    <li>平成26年 島田塗装旗</li>
+                </ul>
+            </details>
+
+            <!-- 3位 -->
+            <ul class="result-list" style="margin-top: 1rem;">
+                <li><span class="text-red">3位</span></li>
+                <li style="padding-left: 1rem;">平成9年 太陽グループ杯石狩大会</li>
+                <li style="padding-left: 1rem;">平成12年 太陽グループ杯北海道大会</li>
+                <li style="padding-left: 1rem;">平成19年 道新ユベオツの風旗</li>
+            </ul>
+
+            <!-- ベスト8 プルダウン -->
+            <details class="history-dropdown">
+                <summary>ベスト8（タップして一覧を表示）</summary>
+                <ul class="result-list">
+                    <li>昭和60年 全道少年札幌大会</li>
+                    <li>昭和61年 石狩東部選手権大会</li>
+                    <li>昭和63年 日刊スポーツ秋季大会</li>
+                </ul>
+            </details>
+
+            <!-- ベスト16 プルダウン -->
+            <details class="history-dropdown">
+                <summary>ベスト16（タップして一覧を表示）</summary>
+                <ul class="result-list">
+                    <li>昭和58年 北海道選手権札幌大会</li>
+                </ul>
+            </details>
         </section>
 
         <!-- 団員募集 -->
